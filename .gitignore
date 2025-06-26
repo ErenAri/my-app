@@ -1,0 +1,14 @@
+# Node
+node_modules/
+.env
+dist/
+build/
+.DS_Store
+*.log
+
+# VS Code
+.vscode/
+
+# Frontend & Backend bağımlılıkları
+frontend/node_modules/
+backend/node_modules/
