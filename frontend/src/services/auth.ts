@@ -1,5 +1,5 @@
-// frontend/src/services/auth.ts
-const API_URL = 'http://localhost:5000/api/auth';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 export const signup = async (email: string, password: string) => {
@@ -33,7 +33,7 @@ export const login = async (email: string, password: string) => {
 };
 
 export const getProfile = async (token: string) => {
-  const res = await fetch('http://localhost:5000/api/auth/profile', {
+  const res = await fetch(`${API_URL}/profile`, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`,
@@ -47,4 +47,5 @@ export const getProfile = async (token: string) => {
 
   return res.json();
 };
+
 
