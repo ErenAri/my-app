@@ -39,7 +39,7 @@ export default function Signup() {
       >
         Signup
       </button>
-      {message && <p className="mt-2 text-red-500">{message}</p>}
+      {message && <p className="mt-2 text-green-500-500">{message}</p>}
     </div>
   );
 }
